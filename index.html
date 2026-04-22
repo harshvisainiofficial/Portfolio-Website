@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harshvi Saini Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    font-family:'Poppins',sans-serif;
+    background:#000;
+    color:#fff;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#000;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+nav h3{color:cyan;font-family:'Orbitron';}
+
+.menu{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:60px;
+    right:0;
+    background:#000;
+    width:220px;
+}
+.menu a{
+    padding:12px;
+    color:white;
+    text-decoration:none;
+    border-bottom:1px solid #222;
+}
+.menu a:hover{color:cyan;}
+
+.hamburger{
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* HEADER */
+header{text-align:center;padding:80px 40px 40px;}
+header img{
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    border:3px solid cyan;
+    box-shadow:0 0 25px cyan;
+    object-fit: cover;
+}
+
+h1{font-family:'Orbitron';font-size:2.5rem;}
+
+.contact a{color:cyan;margin:0 8px;}
+
+section{padding:40px 10%;}
+
+h2{color:cyan;margin-bottom:20px;font-family:'Orbitron';}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 0 20px #00f7ff22;
+    transition:0.3s;
+}
+
+.card img{
+    width:100%;
+    height:auto;
+    max-height:250px;
+    object-fit:contain;
+    background:#111;
+}
+
+.card:hover{
+    transform:scale(1.02);
+    box-shadow:0 0 30px cyan;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.project img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    margin-right:8px;
+    padding:8px 14px;
+    border-radius:20px;
+    background:transparent;
+    border:1px solid cyan;
+    color:cyan;
+    text-decoration:none;
+}
+.btn:hover{
+    background:cyan;
+    color:black;
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+.modal-content{
+    background:#111;
+    padding:20px;
+    border-radius:10px;
+    max-width:600px;
+    width:100%;
+    max-height:90vh;
+    overflow-y:auto;
+}
+.close{
+    float:right;
+    cursor:pointer;
+    color:cyan;
+    font-size:20px;
+}
+
+/* FADE */
+.fade{opacity:0;transform:translateY(30px);transition:1s;}
+.fade.show{opacity:1;transform:translateY(0);}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+h1{font-size:2rem;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<h3>Harshvi</h3>
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+<div class="menu" id="menu">
+<a href="#about">ABOUT</a>
+<a href="#education">EDUCATION</a>
+<a href="#skills">TECHNICAL SKILLS</a>
+<a href="#projects">PROJECTS</a>
+<a href="#certs">CERTIFICATES & BADGES</a>
+<a href="#experience">EXPERIENCE</a>
+
+</div>
+</nav>
+
+<header>
+<img src="My photo.jpg">
+<h1>HARSHVI SAINI</h1>
+<div class="contact">
+<a href="https://www.linkedin.com/in/harshvi-saini-895b62292" target="_blank">LinkedIn</a> |
+<a href="https://github.com/harshvisainiofficial" target="_blank">GitHub</a><br>
++91 7850027046 | harshvisainiofficial@gmail.com
+</div>
+</header>
+
+<section id="about" class="fade">
+<h2>ABOUT</h2> 
+<div class="card">
+Machine Learning and Data Science student with hands-on experience in data preprocessing,
+exploratory data analysis (EDA), feature engineering, and regression modeling. Built end-to-end
+ML and data analytics projects using Python, SQL, and Scikit-learn on real-world datasets. Seeking an
+ML Intern role to apply analytical and modeling skills in a production-oriented environment.
+</div>
+</section>
+
+<section id="education" class="fade">
+<h2>EDUCATION</h2>
+<div class="card">
+<b>IIT Madras - BS in Data Science & Applications</b><br>
+Madras, India | 08/2021 - Present<br><br>
+
+<b>Shekhawati University - BA</b><br>
+Pilani, India | 08/2021 - 05/2024<br><br>
+
+<b>Board 12th - Senior Secondary</b><br>
+Rajasthan, India | 04/2020 - 05/2021<br><br>
+
+<b>Board 10th - Secondary</b><br>
+Rajasthan, India | 04/2018 - 05/2019<br>
+• Scored 100% in Mathematics
+</div>
+</section>
+
+<section id="skills" class="fade">
+<h2>TECHNICAL SKILLS</h2>
+<div class="card">
+<b>Programming Languages:</b><br>
+Python, SQL, Java<br><br>
+
+<b>Machine Learning & Data Science:</b><br>
+Exploratory Data Analysis (EDA), Data Cleaning, Feature Engineering, Regression Models, Model Training,
+Model Evaluation, Hyperparameter Tuning, Bias-Variance Tradeoff<br><br>
+
+<b>Libraries & Frameworks:</b><br>
+Pandas, NumPy, Matplotlib, Scikit-learn<br><br>
+
+<b>Data Analysis Tools:</b><br>
+Microsoft Excel (Pivot Tables, Data Visualization, Statistical Analysis)<br><br>
+
+<b>Web Technologies:</b><br>
+Flask, VueJS<br><br>
+
+<b>Version Control & Platforms:</b><br>
+Git, GitHub, Kaggle, Jupyter, Colab
+</div>
+</section>
+
+<section id="projects" class="fade">
+<h2>PROJECTS</h2>
+<div class="grid">
+
+<div class="card project" onclick="openModal('m1')">
+<img src="cinema.avif">
+<h3>Cinema Audience Forecasting – Machine Learning Project</h3>
+</div>
+
+<div class="card project" onclick="openModal('m2')">
+<img src="inventory.jpg">
+<h3>Inventory Optimization & Profitability Analysis – Data Analytics Project</h3>
+</div>
+
+<div class="card project" onclick="openModal('m3')">
+<img src="quiz.png">
+<h3>Quiz Master – Online Exam Preparation Platform</h3>
+</div>
+
+<div class="card project" onclick="openModal('m4')">
+<img src="grocery.jpg">
+<h3>Grocery Selling Website – Full Stack Development Project</h3>
+</div>
+
+</div>
+</section>
+
+<!-- MODALS -->
+
+<div id="m1" class="modal"><div class="modal-content">
+<span class="close" onclick="closeModal('m1')">X</span>
+<p>Kaggle Academic Competition | Oct 2025 – Dec 2026</p>
+<ul>
+<li>Developed an end-to-end machine learning pipeline to predict daily cinema audience turnout</li>
+<li>Conducted EDA on structured datasets, handling missing values, categorical encoding, and outlier treatment</li>
+<li>Applied feature engineering techniques to improve model generalization</li>
+<li>Trained and evaluated multiple regression models using Scikit-learn</li>
+<li>Strengthened understanding of model performance metrics, error analysis, and real-world data challenges</li>
+</ul>
+<a class="btn" href="https://github.com/harshvisainiofficial/Cinema-Audience-Forecasting-Machine-Learning-Model" target="_blank">GitHub</a>
+</div></div>
+
+<div id="m2" class="modal"><div class="modal-content">
+<span class="close" onclick="closeModal('m2')">X</span>
+<p>Vashu Communication | May 2025 – Jun 2025</p>
+<ul>
+<li>Analyzed sales and inventory datasets to identify demand trends and stock inefficiencies</li>
+<li>Performed ABC analysis, demand forecasting, and inventory turnover analysis</li>
+<li>Built pivot-table-based dashboards to visualize sales performance and stock movement</li>
+<li>Delivered data-backed recommendations to optimize inventory planning and improve profitability</li>
+<li>Demonstrated ability to translate analytical insights into business decisions</li>
+</ul>
+<a class="btn" href="https://github.com/harshvisainiofficial/Vashu_communication_data_study" target="_blank">GitHub</a>
+</div></div>
+
+<div id="m3" class="modal"><div class="modal-content">
+<span class="close" onclick="closeModal('m3')">X</span>
+<p>Academic Project | Jun 2025</p>
+<ul>
+<li>Developed a multi-user web application with authentication and role-based access</li>
+<li>Designed admin and user dashboards for quiz management and performance tracking</li>
+<li>Used AI-assisted debugging to improve application stability and development efficiency</li>
+<li>Implemented frontend using VueJS and backend APIs for seamless data flow</li>
+<li>Scored: 91%</li>
+</ul>
+<a class="btn" href="https://github.com/21f3002418/quiz_master" target="_blank">GitHub</a>
+<a class="btn" href="https://drive.google.com/file/d/1RB5zGBBGU9ALoUJMPinkDG72DJ65ZE4I/view?usp=sharing" target="_blank">Video</a>
+</div></div>
+
+<div id="m4" class="modal"><div class="modal-content">
+<span class="close" onclick="closeModal('m4')">X</span>
+<p>Academic Project | Jan 2022 – Apr 2022</p>
+<ul>
+<li>Built a full-stack e-commerce web application using Flask and SQLAlchemy</li>
+<li>Implemented CRUD operations for product and category management</li>
+<li>Designed separate admin and user workflows for real-world usability</li>
+<li>Scored: 92%</li>
+</ul>
+<a class="btn" href="https://github.com/harshvisainiofficial/GroceryStoreWebsite" target="_blank">GitHub</a>
+</div></div>
+
+<section id="certs" class="fade">
+<h2>CERTIFICATIONS & BADGES</h2>
+<div class="grid">
+
+<div class="card">
+<img src="Great Learning.png">
+<p>Machine Learning in Python – Great Learning</p>
+</div>
+
+<div class="card">
+<img src="Hackerrank.png">
+<p>Python Badge in HackerRank</p>
+</div>
+
+<div class="card">
+<img src="Leetcode SQL Badge.png">
+<p>SQL 50 BADGE on LeetCode</p>
+</div>
+
+</div>
+</section>
+
+<section id="experience" class="fade">
+<h2>EXPERIENCE</h2>
+<div class="card">
+<b>Kids Garden Sr. Sec. School, Pilani</b><br>
+Administrative & Digital Marketing<br>
+Nov 2024 – Mar 2025<br><br>
+
+● Maintained administrative dataset and performed data entry and validation on government education portals<br>
+● Managed school social media data and engagement metrics<br>
+● Content creation for digital marketing
+</div>
+</section>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").style.display =
+document.getElementById("menu").style.display==="flex"?"none":"flex";
+}
+
+function openModal(id){
+document.getElementById(id).style.display="flex";
+}
+function closeModal(id){
+document.getElementById(id).style.display="none";
+}
+
+const faders=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+faders.forEach(el=>{
+if(el.getBoundingClientRect().top<window.innerHeight-100){
+el.classList.add('show');
+}
+});
+});
+</script>
+
+</body>
+</html>
